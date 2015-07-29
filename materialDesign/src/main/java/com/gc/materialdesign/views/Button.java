@@ -33,8 +33,8 @@ final static String ANDROIDXML = "http://schemas.android.com/apk/res/android";
 	
 	public Button(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		setDefaultProperties();
-		setAttributes(attrs);
+//		setDefaultProperties();
+//		setAttributes(attrs);
 	}
 	
 	protected void setDefaultProperties(){

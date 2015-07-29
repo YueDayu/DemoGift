@@ -8,5 +8,28 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="windowActionBar">false</item>
 
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+
     </style>
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_bottom_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_top_out</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_bottom_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_top_in</item>
+    </style>
+
+    <style name="demo_main_buttons">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="demo_top_bar">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/basic_color</item>
+    </style>
+
 </resources>

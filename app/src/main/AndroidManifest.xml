@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".alarm.AlarmActivity"></activity>
+        <activity android:name=".select.SelectActivity"></activity>
+        <activity android:name=".demo.DemoActivity"></activity>
+        <activity android:name=".laction.LocationActivity"></activity>
+        <activity android:name=".more.MoreActivity"></activity>
+        <activity android:name=".plus.PlusActivity"></activity>
+
     </application>
 
 </manifest>

@@ -5,6 +5,8 @@
        <attr name="showNumberIndicator" format="boolean" />
 <!--        in progress view indicate max value of progress -->
        <attr name="max" format="integer" />
+
+        <attr name="iconSize" format="dimension" />
 <!--        in progress view indicate min value of progress -->
        <attr name="min" format="integer" />
 <!--        in progress view indicate value of progress -->

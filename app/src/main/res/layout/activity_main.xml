@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -6,43 +7,91 @@
 
     <RelativeLayout
         android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/basic_color"
-        >
+        style="@style/demo_top_bar">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:src="@mipmap/demo_main_header_text"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:src="@mipmap/demo_main_header_text"/>
 
     </RelativeLayout>
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="400dp"
-        android:src="@mipmap/demo_main"
         android:layout_below="@+id/header"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/demo_main"/>
 
     <ImageView
         android:id="@+id/demo_main_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/demo_main_location"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/header"
-        android:layout_alignParentRight="true"/>
+        android:src="@mipmap/demo_main_location"/>
 
-    <LinearLayout
+    <View
         android:layout_width="fill_parent"
         android:layout_height="57dp"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/white"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="2">
 
+            <com.gc.materialdesign.views.ButtonFlatWithIcon
+                android:id="@+id/demo_main_button_alarm"
+                style="@style/demo_main_buttons"
+                materialdesign:iconFloat="@mipmap/demo_main_button_alarm"
+                materialdesign:iconSize="26dp"/>
+
+            <com.gc.materialdesign.views.ButtonFlatWithIcon
+                android:id="@+id/demo_main_button_select"
+                style="@style/demo_main_buttons"
+                materialdesign:iconFloat="@mipmap/demo_main_button_select"
+                materialdesign:iconSize="26dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/demo_main_button_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/demo_main_button_plus"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="2">
+
+            <com.gc.materialdesign.views.ButtonFlatWithIcon
+                android:id="@+id/demo_main_button_more"
+                style="@style/demo_main_buttons"
+                materialdesign:iconFloat="@mipmap/demo_main_button_more"
+                materialdesign:iconSize="26dp"/>
+
+            <com.gc.materialdesign.views.ButtonFlatWithIcon
+                android:id="@+id/demo_main_button_demo"
+                style="@style/demo_main_buttons"
+                materialdesign:iconFloat="@mipmap/demo_main_button_demo"
+                materialdesign:iconSize="26dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
