@@ -3,4 +3,20 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="alarm_title">晨钟暮鼓</string>
+
+    <string name="edit">编辑</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+
+    <string name="mon">月</string>
+    <string name="tues">火</string>
+    <string name="wed">水</string>
+    <string name="thur">木</string>
+    <string name="fri">金</string>
+    <string name="sat">土</string>
+    <string name="sun">日</string>
+
+    <string name="alarm_edit_saved">保存成功</string>
 </resources>

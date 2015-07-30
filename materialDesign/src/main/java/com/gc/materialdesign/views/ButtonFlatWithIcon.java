@@ -87,8 +87,6 @@ public class ButtonFlatWithIcon extends Button
 		TypedArray styledAttrs = mContext.obtainStyledAttributes(attrs, R.styleable.CustomAttributes);
 
 		sizeIcon = styledAttrs.getDimensionPixelSize(R.styleable.CustomAttributes_iconSize, 47);
-
-		System.out.println("size of icon is: " + sizeIcon);
 	}
 
 

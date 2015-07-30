@@ -2,5 +2,12 @@
 <resources>
 
     <color name="basic_color">#ff5c5d</color>
+    <color name="alarm_color">#fe4d4f</color>
+    <color name="s_basic_color">#ede6e1</color>
+    <color name="basic_bg">#eae4d9</color>
+
+    <color name="gold">#f39b4c</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#d3cfd1</color>
 
 </resources>
