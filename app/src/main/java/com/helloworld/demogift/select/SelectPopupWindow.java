@@ -11,6 +11,8 @@ import android.widget.PopupWindow;
 import com.gc.materialdesign.views.ButtonFlat;
 import com.helloworld.demogift.R;
 
+import tools.ToastTools;
+
 /**
  * Created by YueXy on 7/31/2015.
  */
@@ -22,7 +24,7 @@ public class SelectPopupWindow extends PopupWindow
 	private NumberPicker selectDay;
 	private Button selectOK;
 
-	public SelectPopupWindow(Activity context, View.OnClickListener itemclick)
+	public SelectPopupWindow(final Activity context, View.OnClickListener itemclick)
 	{
 		super(context);
 		LayoutInflater inflater = LayoutInflater.from(context);
@@ -48,6 +50,7 @@ public class SelectPopupWindow extends PopupWindow
 			@Override
 			public void onClick(View v)
 			{
+				ToastTools.showToast(context, "选择课程成功");
 				dismiss();
 			}
 		});
