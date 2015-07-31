@@ -38,4 +38,9 @@
         <item name="android:paddingRight">3dp</item>
     </style>
 
+    <style name="select_popup_anim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom_popup_out</item>
+    </style>
+
 </resources>

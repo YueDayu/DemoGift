@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/lesson_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新标准日本语N3"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="9dp"/>
+
+    <TextView
+        android:id="@+id/lesson_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/gray"
+        android:text="13/233"
+        android:layout_alignBottom="@+id/lesson_name"
+        android:layout_toRightOf="@+id/lesson_name" />
+
+    <ImageView
+        android:id="@+id/lesson_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/select_list_selected"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+    <!--<ProgressBar-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:progress="30"/>-->
+
+</RelativeLayout>
