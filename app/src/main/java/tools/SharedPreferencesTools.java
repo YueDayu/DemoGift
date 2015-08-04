@@ -128,4 +128,15 @@ public class SharedPreferencesTools
 	{
 		return sharedPreferences.getBoolean(BasicInfo.ALARM_CHECKED_SUN, false);
 	}
+
+	public void setMainEyes(boolean b)
+	{
+		editor.putBoolean(BasicInfo.MAIN_EYES, b);
+		editor.commit();
+	}
+
+	public boolean getMainEyes()
+	{
+		return sharedPreferences.getBoolean(BasicInfo.MAIN_EYES, false);
+	}
 }

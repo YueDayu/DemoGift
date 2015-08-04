@@ -35,10 +35,10 @@ public class SelectPopupWindow extends PopupWindow
 		selectOK = (Button) mainView.findViewById(R.id.select_popup_ok);
 
 		this.setWidth(LayoutParams.MATCH_PARENT);
-		this.setHeight(LayoutParams.WRAP_CONTENT);
+		this.setHeight(LayoutParams.MATCH_PARENT);
 		this.setContentView(mainView);
 		this.setFocusable(true);
-		this.setAnimationStyle(R.style.select_popup_anim);
+		//this.setAnimationStyle(R.style.select_popup_anim);
 
 		selectMonth.setMinValue(0);
 		selectMonth.setMaxValue(12);

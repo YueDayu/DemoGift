@@ -28,8 +28,7 @@ public class FinishDialog extends Dialog
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.finish_dialog_layout);
-
+		setContentView(R.layout.select_popup_view);
 
 	}
 }

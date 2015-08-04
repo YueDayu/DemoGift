@@ -172,4 +172,45 @@
 
     </ScrollView>
 
+    <SlidingDrawer
+        android:id="@+id/myslidingDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dip"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <RelativeLayout
+            android:id="@+id/handle"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:background="@color/white">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:background="#ffffff" >
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <android.support.v4.view.PagerTabStrip
+                    android:id="@+id/pagertab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:textColor="#fff"/>
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+    </SlidingDrawer>
+
 </LinearLayout>

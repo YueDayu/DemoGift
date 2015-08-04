@@ -26,6 +26,15 @@
         android:src="@mipmap/demo_main"/>
 
     <ImageView
+        android:id="@+id/demo_main_eyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="195dp"
+        android:src="@mipmap/demo_main_uneyes"/>
+
+    <ImageView
         android:id="@+id/demo_main_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

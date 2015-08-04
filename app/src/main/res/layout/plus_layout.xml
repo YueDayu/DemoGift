@@ -20,6 +20,7 @@
             android:src="@mipmap/demo_button_back"/>
 
         <TextView
+            android:id="@+id/plus_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -27,6 +28,15 @@
             android:text="15/450"
             android:textColor="@color/white"
             android:textSize="30sp"/>
+
+        <ImageView
+            android:id="@+id/plus_menu"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/menu"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
 
     </RelativeLayout>
 

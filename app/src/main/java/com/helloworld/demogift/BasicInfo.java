@@ -20,6 +20,8 @@ public class BasicInfo
 	public static final String ALARM_CHECKED_SAT = "alarm_checked_sat";
 	public static final String ALARM_CHECKED_SUN = "alarm_checked_sun";
 
+	public static final String MAIN_EYES = "eyes";
+
 	// Extra
 	public static final String LAUNCH_ACTIVITY = "alarm_launch_activity";
 	public static final String MAIN_ACTIVITY = "main_activity";

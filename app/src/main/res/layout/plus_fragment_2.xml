@@ -1,26 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/basic_bg"
-    android:padding="20dp"
-    android:orientation="vertical">
+    android:background="@color/basic_bg">
 
-    <ImageView
-        android:id="@+id/ftg_img_2_1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/b1"/>
+        android:layout_height="match_parent"
+        android:background="@color/basic_bg"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <View android:layout_width="fill_parent" android:layout_height="40dp"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="30dp">
 
-    <ImageView
-        android:id="@+id/ftg_img_2_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/b2"/>
+            <ImageView
+                android:id="@+id/ftg_like_2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/ftg_sound_2"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/like"/>
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/ftg_sound_2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/sounds"/>
+
+            <ImageView
+                android:id="@+id/ftg_word_2"
+                android:layout_width="200dp"
+                android:layout_height="220dp"
+                android:layout_below="@+id/ftg_sound_2"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/word_pic1"/>
+
+        </RelativeLayout>
+
+        <View android:layout_width="fill_parent" android:layout_height="40dp"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ftg_img_2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/word_detai_1"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/ftg_btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:text="下一个"
+            android:textColor="@drawable/button_text_color"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

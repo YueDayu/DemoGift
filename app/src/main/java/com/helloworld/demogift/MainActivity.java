@@ -1,9 +1,11 @@
 package com.helloworld.demogift;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 
 import com.gc.materialdesign.views.ButtonFlatWithIcon;
@@ -13,6 +15,8 @@ import com.helloworld.demogift.laction.LocationActivity;
 import com.helloworld.demogift.more.MoreActivity;
 import com.helloworld.demogift.plus.PlusActivity;
 import com.helloworld.demogift.select.SelectActivity;
+
+import tools.SharedPreferencesTools;
 
 public class MainActivity extends Activity implements View.OnClickListener
 {
@@ -25,6 +29,8 @@ public class MainActivity extends Activity implements View.OnClickListener
 	private static final int MORE_ID = R.id.demo_main_button_more;
 	private static final int DEMO_ID = R.id.demo_main_button_demo;
 
+	private static final int duration = 2000;
+
 	private ImageView location;
 	private ImageView plus;
 
@@ -32,6 +38,8 @@ public class MainActivity extends Activity implements View.OnClickListener
 	private ButtonFlatWithIcon select;
 	private ButtonFlatWithIcon more;
 	private ButtonFlatWithIcon demo;
+
+	private ImageView eye;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -52,6 +60,8 @@ public class MainActivity extends Activity implements View.OnClickListener
 		demo.setOnClickListener(this);
 		location.setOnClickListener(this);
 		plus.setOnClickListener(this);
+
+		checkEye();
 	}
 
 	private void findViews()
@@ -63,6 +73,8 @@ public class MainActivity extends Activity implements View.OnClickListener
 		select = (ButtonFlatWithIcon) findViewById(SELECT_ID);
 		more = (ButtonFlatWithIcon) findViewById(MORE_ID);
 		demo = (ButtonFlatWithIcon) findViewById(DEMO_ID);
+
+		eye = (ImageView) findViewById(R.id.demo_main_eyes);
 	}
 
 	@Override
@@ -95,5 +107,29 @@ public class MainActivity extends Activity implements View.OnClickListener
 			overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
 			break;
 		}
+	}
+
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+
+		checkEye();
+	}
+
+	private void checkEye()
+	{
+		boolean isEye = SharedPreferencesTools.getInstance().getMainEyes();
+
+		if (isEye && eye.getScaleY() > 0)
+		{
+			eye.setPivotY(1.0f);
+			eye.setPivotX(1.0f);
+			final ObjectAnimator scaleYs = ObjectAnimator.ofFloat(eye, "scaleY", 0).setDuration(duration);
+			scaleYs.setInterpolator(new DecelerateInterpolator());
+			scaleYs.start();
+		}
+
+		SharedPreferencesTools.getInstance().setMainEyes(false);
 	}
 }

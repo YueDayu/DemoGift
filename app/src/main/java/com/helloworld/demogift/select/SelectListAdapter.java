@@ -7,6 +7,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -42,10 +44,10 @@ public class SelectListAdapter extends RecyclerView.Adapter<SelectListAdapter.Se
 	}
 
 	@Override
-	public void onBindViewHolder(final SelectViewHolder holder, int position)
+	public void onBindViewHolder(final SelectViewHolder holder, final int position)
 	{
 		holder.lessonName.setText(list.get(position).lessonName);
-		holder.number.setText(list.get(position).lessonNum);
+		holder.number.setText(list.get(position).lessonRate + "/" + list.get(position).lessonLength);
 
 		if (list.get(position).isSelected)
 			holder.selectedImg.setVisibility(View.VISIBLE);
@@ -61,10 +63,11 @@ public class SelectListAdapter extends RecyclerView.Adapter<SelectListAdapter.Se
 				{
 					holder.selectedImg.setVisibility(View.VISIBLE);
 
-					// show dialog
-					SelectPopupWindow selectPopupWindow = new SelectPopupWindow((Activity)mContext, null);
-					selectPopupWindow.showAtLocation(LayoutInflater.from(mContext).inflate(R.layout.select_layout, null),
-							Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+					SelectDialog selectDialog = new SelectDialog(mContext, list.get(position).lessonName, list.get(position).lessonLength);
+					Window window = selectDialog.getWindow();
+					window.setGravity(Gravity.BOTTOM);
+					window.setWindowAnimations(R.style.select_popup_anim);
+					selectDialog.show();
 				}
 			}
 		});
