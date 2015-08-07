@@ -64,13 +64,13 @@
                 android:id="@+id/demo_main_button_alarm"
                 style="@style/demo_main_buttons"
                 materialdesign:iconFloat="@mipmap/demo_main_button_alarm"
-                materialdesign:iconSize="26dp"/>
+                materialdesign:iconSize="30dp"/>
 
             <com.gc.materialdesign.views.ButtonFlatWithIcon
                 android:id="@+id/demo_main_button_select"
                 style="@style/demo_main_buttons"
                 materialdesign:iconFloat="@mipmap/demo_main_button_select"
-                materialdesign:iconSize="26dp"/>
+                materialdesign:iconSize="30dp"/>
 
         </LinearLayout>
 
@@ -92,13 +92,13 @@
                 android:id="@+id/demo_main_button_more"
                 style="@style/demo_main_buttons"
                 materialdesign:iconFloat="@mipmap/demo_main_button_more"
-                materialdesign:iconSize="26dp"/>
+                materialdesign:iconSize="30dp"/>
 
             <com.gc.materialdesign.views.ButtonFlatWithIcon
                 android:id="@+id/demo_main_button_demo"
                 style="@style/demo_main_buttons"
                 materialdesign:iconFloat="@mipmap/demo_main_button_demo"
-                materialdesign:iconSize="26dp"/>
+                materialdesign:iconSize="30dp"/>
 
         </LinearLayout>
 

@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="15/450"
+            android:text="1/450"
             android:textColor="@color/white"
             android:textSize="30sp"/>
 

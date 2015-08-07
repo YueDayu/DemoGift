@@ -92,7 +92,7 @@ public class PlusActivity extends FragmentActivity
 	public void switchFragment()
 	{
 		//mFragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
-		plus_title.setText(15 + local + "/450");
+		plus_title.setText(1 + local + "/450");
 		if (position == 1)
 		{
 			if (!afterFragmenSupport.isAdded())
