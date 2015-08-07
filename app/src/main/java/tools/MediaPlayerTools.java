@@ -9,9 +9,16 @@ import com.helloworld.demogift.MyApplication;
  */
 public class MediaPlayerTools
 {
+	private static MediaPlayer mp = null;
+
 	public static void playMp3(int res)
 	{
-		MediaPlayer mp = MediaPlayer.create(MyApplication.getInstance(), res);
+		mp = MediaPlayer.create(MyApplication.getInstance(), res);
 		mp.start();
+	}
+
+	public static void stop() {
+		mp.stop();
+		mp.release();
 	}
 }

@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.helloworld.demogift.R;
 
+import tools.MediaPlayerTools;
+
 /**
  * Created by YueXy on 8/1/2015.
  */
@@ -29,6 +31,13 @@ public class FinishDialog extends Dialog
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.finish_dialog_layout);
-
+		MediaPlayerTools.playMp3(R.raw.music);
 	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		MediaPlayerTools.stop();
+	}
+
 }
