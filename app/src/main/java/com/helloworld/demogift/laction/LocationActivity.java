@@ -17,6 +17,8 @@ import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
@@ -30,6 +32,7 @@ import com.helloworld.demogift.R;
 public class LocationActivity extends Activity {
     MapView mMapView = null;
     BaiduMap mBaiduMap;
+    MapStatusUpdateFactory map;
     private EditText etTest = null;
     private ListPopupWindow lpw;
     private String[] list;
@@ -47,6 +50,8 @@ public class LocationActivity extends Activity {
                 .position(point)
                 .icon(bitmap);
         mBaiduMap.addOverlay(option);
+        MapStatusUpdate u = MapStatusUpdateFactory.newLatLngZoom(point, 18);
+        mBaiduMap.animateMapStatus(u);
         etTest = (EditText)findViewById(R.id.search_edit);
         etTest.setOnTouchListener(new View.OnTouchListener() {
             @Override
