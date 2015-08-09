@@ -12,6 +12,7 @@
         android:clickable="true" />
 
     <LinearLayout
+        android:layout_margin="20dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <Button
@@ -21,11 +22,13 @@
             android:background="@drawable/selector_back_btn"/>
         <EditText
             android:id="@+id/search_edit"
-            android:layout_width="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="160dp"
             android:layout_height="40dp"
             android:inputType="text"
             android:background="@drawable/search_edit"
-            android:drawableRight="@mipmap/unfold" />
+            android:drawableRight="@mipmap/unfold"
+            android:text="宿舍"/>
         <Button
             android:id="@+id/search_btn"
             android:layout_width="66dp"

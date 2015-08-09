@@ -69,7 +69,7 @@ public class LocationActivity extends Activity {
             }
         });
 
-        list = new String[] { "紫荆公寓", "宿舍", "食堂", "超市" };
+        list = new String[] {"宿舍", "食堂", "超市" };
         lpw = new ListPopupWindow(this);
 //        lpw.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ffffff")));
         lpw.setAdapter(new ArrayAdapter<String>(this,
