@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="false"
+        android:drawable="@mipmap/demo_map_button_search">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="20dp"
+                android:topRightRadius="20dp"
+                />
+            <solid android:color="#ff4500" />
+            <!--<stroke android:width="2dp" android:color="#ffd700" />-->
+        </shape>
+    </item>
+    <item android:state_pressed="true"
+        android:drawable="@mipmap/demo_map_button_search">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="20dp"
+                android:topRightRadius="20dp"
+                />
+            <solid android:color="#d3d3d3" />
+            <!--<stroke android:width="2dp" android:color="#ffd700" />-->
+        </shape>
+    </item>
+
+    <item android:drawable="@mipmap/demo_map_button_search">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="20dp"
+                android:topRightRadius="20dp"
+                />
+            <solid android:color="#d3d3d3" />
+            <!--<stroke android:width="2dp" android:color="#ffd700" />-->
+        </shape>
+    </item>
+
+</selector>
