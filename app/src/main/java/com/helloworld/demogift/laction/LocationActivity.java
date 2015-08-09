@@ -1,6 +1,7 @@
 package com.helloworld.demogift.laction;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
@@ -10,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -24,7 +26,9 @@ import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
+import com.helloworld.demogift.MainActivity;
 import com.helloworld.demogift.R;
+import com.helloworld.demogift.select.SelectActivity;
 
 /**
  * Created by YueXy on 7/30/2015.
@@ -36,11 +40,27 @@ public class LocationActivity extends Activity {
     private EditText etTest = null;
     private ListPopupWindow lpw;
     private String[] list;
+    private Button back_btn = null;
+    private Button search_btn = null;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.location_layout);
+        back_btn = (Button)findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        search_btn = (Button)findViewById(R.id.search_btn);
+        search_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO
+            }
+        });
         mMapView = (MapView) findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
         LatLng point = new LatLng(40.015391, 116.332535);
