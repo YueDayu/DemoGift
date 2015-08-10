@@ -35,7 +35,8 @@ public class FinishDialog extends Dialog
 	}
 
 	@Override
-	protected void onStop() {
+	protected void onStop()
+	{
 		super.onStop();
 		MediaPlayerTools.stop();
 	}

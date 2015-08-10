@@ -17,7 +17,8 @@ public class MediaPlayerTools
 		mp.start();
 	}
 
-	public static void stop() {
+	public static void stop()
+	{
 		mp.stop();
 		mp.release();
 	}
