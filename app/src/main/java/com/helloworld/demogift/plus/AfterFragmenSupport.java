@@ -99,7 +99,7 @@ public class AfterFragmenSupport extends Fragment
 			@Override
 			public void onClick(View v)
 			{
-				if (plusActivity.local == 0)
+				if (plusActivity.local != 0)
 				{
 					plusActivity.local++;
 					plusActivity.switchFragment();
@@ -115,7 +115,7 @@ public class AfterFragmenSupport extends Fragment
 
 	public void setImage()
 	{
-		if (plusActivity.local == 0)
+		if (plusActivity.local != 0)
 		{
 			drawable2 = getResources().getDrawable(R.mipmap.word_detai_1);
 			imageView2.setImageResource(R.mipmap.word_detai_1);
